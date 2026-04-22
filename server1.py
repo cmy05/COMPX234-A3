@@ -40,3 +40,6 @@ class TupleSpace:
                 self.error_ops += 1  
                 return None 
             return self.tuples.pop(key) 
+        
+    def stats_printer(tuple_space: TupleSpace):
+        
