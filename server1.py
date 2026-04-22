@@ -24,3 +24,11 @@ class TupleSpace:
                 return 1  
             self.tuples[key] = value  
             return 0 
+    def read(self, key: str) -> str | None: 
+        with self.lock:  
+            self.total_ops += 1  
+            self.read_ops += 1  
+            if key not in self.tuples: 
+                self.error_ops += 1 
+                return None  
+            return self.tuples.get(key)
