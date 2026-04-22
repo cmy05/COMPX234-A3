@@ -59,3 +59,5 @@ def main():
             else: 
                 print(f"{line}: 错误 - 不支持的命令")  
                 continue 
+            resp = send_request(sock, req)  
+            print(f"{line}: {resp}")
