@@ -115,4 +115,9 @@ class TupleSpace:
          server.listen(10)
          print(f"Server started on port {port}, waiting clients...")
 
-         st = threading.Thread(target=stats_printer, args=(ts,), daemon=True)  
+         st = threading.Thread(target=stats_printer, args=(ts,), daemon=True) 
+         st.start()
+
+         while True: 
+          client_sock, addr = server.accept() 
+          print(f"New client: {addr}") 
