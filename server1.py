@@ -63,4 +63,14 @@ class TupleSpace:
     def handle_client(client_socket, tuple_space):
         try:  
             with client_socket:  
-               tuple_space.total_connections += 1  
+               tuple_space.total_connections += 1 
+               while True: 
+                len_head = client_socket.recv(3)  
+                if not len_head:  
+                    break  
+                msg_len = int(len_head.decode().strip()) 
+                msg = client_socket.recv(msg_len - 3).decode().strip()  
+                parts = msg.split() 
+                if not parts:  
+                    continue  
+ 
