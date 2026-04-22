@@ -56,3 +56,6 @@ def main():
             elif cmd == "GET":  
                 key = parts[1] 
                 req = f"G {key}"
+            else: 
+                print(f"{line}: 错误 - 不支持的命令")  
+                continue 
