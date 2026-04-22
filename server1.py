@@ -32,3 +32,11 @@ class TupleSpace:
                 self.error_ops += 1 
                 return None  
             return self.tuples.get(key)
+    def get(self, key: str) -> str | None:  
+        with self.lock:  
+            self.total_ops += 1  
+            self.get_ops += 1  
+            if key not in self.tuples:  
+                self.error_ops += 1  
+                return None 
+            return self.tuples.pop(key) 
