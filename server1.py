@@ -109,3 +109,4 @@ class TupleSpace:
           return 
          
          ts = TupleSpace()
+         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
