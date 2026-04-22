@@ -104,4 +104,6 @@ class TupleSpace:
           print("Usage: python server.py <port> (50000-59999)") 
           return
          port = int(sys.argv[1])
-         
+         if not (50000 <= port <= 59999):  
+          print("Port must be 50000~59999")  
+          return 
