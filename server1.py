@@ -114,3 +114,5 @@ class TupleSpace:
          server.bind(("0.0.0.0", port))
          server.listen(10)
          print(f"Server started on port {port}, waiting clients...")
+
+         st = threading.Thread(target=stats_printer, args=(ts,), daemon=True)  
