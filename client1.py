@@ -43,3 +43,10 @@ def main():
                 continue 
 
             cmd = parts[0]
+            if cmd == "PUT":  
+                kv = parts[1].split(maxsplit=1)  
+                if len(kv) < 2: 
+                    print(f"{line}: 错误 - 格式无效")  
+                    continue  
+                key, val = kv  
+                req = f"P {key} {val}"
