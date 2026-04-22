@@ -98,4 +98,4 @@ class TupleSpace:
                 client_socket.sendall(send)
         except:  
          pass 
- 
+    def main():
