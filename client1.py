@@ -7,3 +7,5 @@ def send_request(sock: socket.socket, command: str) -> str:
      full_msg = (formatted_len + command).encode()
 
      sock.sendall(full_msg)
+
+     resp_len_bytes = sock.recv(3)
