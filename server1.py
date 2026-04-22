@@ -73,4 +73,7 @@ class TupleSpace:
                 parts = msg.split() 
                 if not parts:  
                     continue  
+
+                op = parts[0]  
+                resp = 
  
