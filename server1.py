@@ -99,3 +99,4 @@ class TupleSpace:
         except:  
          pass 
     def main():
+         import sys
