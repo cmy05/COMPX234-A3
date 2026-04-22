@@ -121,3 +121,5 @@ class TupleSpace:
          while True: 
           client_sock, addr = server.accept() 
           print(f"New client: {addr}") 
+
+          client_thread = threading.Thread(
