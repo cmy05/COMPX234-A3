@@ -95,4 +95,5 @@ class TupleSpace:
                 full = resp  
                 rlen = len(full) + 3 
                 send = f"{rlen:03d}{full}".encode()
+                client_socket.sendall(send)
  
