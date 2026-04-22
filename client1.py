@@ -50,3 +50,6 @@ def main():
                     continue  
                 key, val = kv  
                 req = f"P {key} {val}"
+            elif cmd == "READ":  
+                key = parts[1]  
+                req = f"R {key}"
