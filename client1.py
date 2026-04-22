@@ -63,3 +63,5 @@ def main():
             print(f"{line}: {resp}")
      finally:  
         sock.close()
+if __name__ == "__main__":  
+    main()
