@@ -127,3 +127,5 @@ class TupleSpace:
               args=(client_sock, ts)
         )
           client_thread.start() 
+if __name__ == "__main__":  
+     main() 
