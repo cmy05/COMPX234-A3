@@ -61,3 +61,5 @@ def main():
                 continue 
             resp = send_request(sock, req)  
             print(f"{line}: {resp}")
+     finally:  
+        sock.close()
