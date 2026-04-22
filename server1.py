@@ -59,3 +59,6 @@ class TupleSpace:
              print(f"Connections: {tuple_space.total_connections}")  # 打印总连接数
              print(f"Ops: total={tuple_space.total_ops} READ={tuple_space.read_ops} GET={tuple_space.get_ops} PUT={tuple_space.put_ops} ERR={tuple_space.error_ops}")  # 打印操作统计
              print("================================\n")  
+
+    def handle_client(client_socket, tuple_space):
+        
