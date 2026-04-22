@@ -41,3 +41,5 @@ def main():
             parts = line.split(maxsplit=1)  
             if not parts:  
                 continue 
+
+            cmd = parts[0]
