@@ -33,3 +33,7 @@ def main():
             line = line.strip() 
             if not line:  
                 continue
+        
+            if len(line) > 970:  
+                print(f"{line}: 错误 - 长度超过限制")  
+                continue
