@@ -61,4 +61,6 @@ class TupleSpace:
              print("================================\n")  
 
     def handle_client(client_socket, tuple_space):
-        
+        try:  
+            with client_socket:  
+               tuple_space.total_connections += 1  
