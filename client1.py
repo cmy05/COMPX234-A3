@@ -9,3 +9,4 @@ def send_request(sock: socket.socket, command: str) -> str:
      sock.sendall(full_msg)
 
      resp_len_bytes = sock.recv(3)
+     resp_len = int(resp_len_bytes.decode().strip())
