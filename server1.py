@@ -42,4 +42,7 @@ class TupleSpace:
             return self.tuples.pop(key) 
         
     def stats_printer(tuple_space: TupleSpace):
-        
+        while True:  # 无限循环，持续打印
+         time.sleep(10)  # 休眠10秒
+         with tuple_space.lock: 
+             total = len(tuple_space.tuples)
