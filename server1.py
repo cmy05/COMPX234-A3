@@ -113,3 +113,4 @@ class TupleSpace:
          server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
          server.bind(("0.0.0.0", port))
          server.listen(10)
+         print(f"Server started on port {port}, waiting clients...")
