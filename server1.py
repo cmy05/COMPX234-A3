@@ -93,4 +93,5 @@ class TupleSpace:
                     resp = "ERR invalid command"
 
                 full = resp  
+                rlen = len(full) + 3 
  
