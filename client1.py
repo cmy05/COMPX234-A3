@@ -20,3 +20,4 @@ def main():
      
      host = sys.argv[1]
      port = int(sys.argv[2])
+     file_path = sys.argv[3]
