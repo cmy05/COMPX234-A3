@@ -100,3 +100,6 @@ class TupleSpace:
          pass 
     def main():
          import sys
+         if len(sys.argv) != 2: 
+          print("Usage: python server.py <port> (50000-59999)") 
+          return
