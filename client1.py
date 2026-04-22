@@ -53,3 +53,6 @@ def main():
             elif cmd == "READ":  
                 key = parts[1]  
                 req = f"R {key}"
+            elif cmd == "GET":  
+                key = parts[1] 
+                req = f"G {key}"
