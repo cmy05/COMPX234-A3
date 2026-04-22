@@ -41,7 +41,7 @@ class TupleSpace:
                 return None 
             return self.tuples.pop(key) 
         
-    def stats_printer(tuple_space: TupleSpace):
+def stats_printer(tuple_space: TupleSpace):
         while True:  
          time.sleep(10)  
          with tuple_space.lock: 
@@ -60,7 +60,7 @@ class TupleSpace:
              print(f"Ops: total={tuple_space.total_ops} READ={tuple_space.read_ops} GET={tuple_space.get_ops} PUT={tuple_space.put_ops} ERR={tuple_space.error_ops}")  # 打印操作统计
              print("================================\n")  
 
-    def handle_client(client_socket, tuple_space):
+def handle_client(client_socket, tuple_space):
         try:  
             with client_socket:  
                tuple_space.total_connections += 1 
@@ -98,7 +98,7 @@ class TupleSpace:
                 client_socket.sendall(send)
         except:  
          pass 
-    def main():
+def main():
          import sys
          if len(sys.argv) != 2: 
           print("Usage: python server.py <port> (50000-59999)") 
@@ -128,4 +128,4 @@ class TupleSpace:
         )
           client_thread.start() 
 if __name__ == "__main__":  
-     main() 
+    main() 
