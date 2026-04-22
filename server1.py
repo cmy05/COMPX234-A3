@@ -14,3 +14,13 @@ class TupleSpace:
         self.get_ops = 0  
         self.put_ops = 0  
         self.error_ops = 0
+
+    def put(self, key: str, value: str) -> int: 
+        with self.lock:  
+            self.total_ops += 1  
+            self.put_ops += 1  
+            if key in self.tuples:  
+                self.error_ops += 1  
+                return 1  
+            self.tuples[key] = value  
+            return 0 
