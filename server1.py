@@ -90,5 +90,7 @@ class TupleSpace:
                     ret = tuple_space.put(key, val)  
                     resp = f"OK ({key}, {val}) added" if ret == 0 else f"ERR {key} already exists"
                 else:  
-                    resp = "ERR invalid command"  
+                    resp = "ERR invalid command"
+
+                full = resp  
  
