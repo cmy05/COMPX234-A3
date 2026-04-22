@@ -107,3 +107,5 @@ class TupleSpace:
          if not (50000 <= port <= 59999):  
           print("Port must be 50000~59999")  
           return 
+         
+         ts = TupleSpace()
