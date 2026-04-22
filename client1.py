@@ -14,3 +14,6 @@ def send_request(sock: socket.socket, command: str) -> str:
      return resp
 
 def main():
+     if len(sys.argv) != 4:  
+        print("用法: python client.py <主机> <端口> <请求文件路径>")  
+        return
