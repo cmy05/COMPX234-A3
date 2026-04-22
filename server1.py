@@ -125,3 +125,5 @@ class TupleSpace:
           client_thread = threading.Thread(
               target=handle_client,  
               args=(client_sock, ts)
+        )
+          client_thread.start() 
