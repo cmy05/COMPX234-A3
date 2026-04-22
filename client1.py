@@ -21,3 +21,6 @@ def main():
      host = sys.argv[1]
      port = int(sys.argv[2])
      file_path = sys.argv[3]
+
+     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
+     sock.connect((host, port))
