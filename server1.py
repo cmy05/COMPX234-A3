@@ -103,3 +103,5 @@ class TupleSpace:
          if len(sys.argv) != 2: 
           print("Usage: python server.py <port> (50000-59999)") 
           return
+         port = int(sys.argv[1])
+         
