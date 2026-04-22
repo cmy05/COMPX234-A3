@@ -37,3 +37,7 @@ def main():
             if len(line) > 970:  
                 print(f"{line}: 错误 - 长度超过限制")  
                 continue
+
+            parts = line.split(maxsplit=1)  
+            if not parts:  
+                continue 
