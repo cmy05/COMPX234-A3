@@ -42,7 +42,13 @@ class TupleSpace:
             return self.tuples.pop(key) 
         
     def stats_printer(tuple_space: TupleSpace):
-        while True:  # 无限循环，持续打印
-         time.sleep(10)  # 休眠10秒
+        while True:  
+         time.sleep(10)  
          with tuple_space.lock: 
              total = len(tuple_space.tuples)
+             if total == 0:  
+                avg_tup = avg_key = avg_val = 0.0  
+             else:  
+                avg_tup = sum(len(k)+len(v) for k,v in tuple_space.tuples.items()) / total  
+                avg_key = sum(len(k) for k in tuple_space.tuples.keys()) / total  
+                avg_val = sum(len(v) for v in tuple_space.tuples.values()) / total  
