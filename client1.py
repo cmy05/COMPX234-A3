@@ -12,3 +12,5 @@ def send_request(sock: socket.socket, command: str) -> str:
      resp_len = int(resp_len_bytes.decode().strip())
      resp = sock.recv(resp_len - 3).decode().strip()
      return resp
+
+def main():
