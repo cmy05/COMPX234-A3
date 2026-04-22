@@ -19,3 +19,4 @@ def main():
         return
      
      host = sys.argv[1]
+     port = int(sys.argv[2])
