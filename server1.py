@@ -123,3 +123,5 @@ class TupleSpace:
           print(f"New client: {addr}") 
 
           client_thread = threading.Thread(
+              target=handle_client,  
+              args=(client_sock, ts)
