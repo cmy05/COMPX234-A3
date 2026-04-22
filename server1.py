@@ -51,4 +51,11 @@ class TupleSpace:
              else:  
                 avg_tup = sum(len(k)+len(v) for k,v in tuple_space.tuples.items()) / total  
                 avg_key = sum(len(k) for k in tuple_space.tuples.keys()) / total  
-                avg_val = sum(len(v) for v in tuple_space.tuples.values()) / total  
+                avg_val = sum(len(v) for v in tuple_space.tuples.values()) / total
+
+             print("\n====== SERVER STATS (10s) ======")  # 打印统计信息分隔线
+             print(f"Tuples: {total}")  # 打印当前元组数量
+             print(f"Avg tuple: {avg_tup:.2f}  Avg key: {avg_key:.2f}  Avg val: {avg_val:.2f}")  # 打印平均大小
+             print(f"Connections: {tuple_space.total_connections}")  # 打印总连接数
+             print(f"Ops: total={tuple_space.total_ops} READ={tuple_space.read_ops} GET={tuple_space.get_ops} PUT={tuple_space.put_ops} ERR={tuple_space.error_ops}")  # 打印操作统计
+             print("================================\n")  
