@@ -75,5 +75,19 @@ class TupleSpace:
                     continue  
 
                 op = parts[0]  
-                resp = 
+                resp = ""
+
+                if op == "R":  # 如果是READ操作
+                    key = parts[1]  # 获取要读取的key
+                    val = tuple_space.read(key)  # 调用元组空间的read方法
+                    resp = f"OK ({key}, {val}) read" if val else f"ERR {key} does not exist"  # 构造响应
+                elif op == "G":  # 如果是GET操作
+                    key = parts[1]  # 获取要获取的key
+                    val = tuple_space.get(key)  # 调用元组空间的get方法
+                    resp = f"OK ({key}, {val}) removed" if val else f"ERR {key} does not exist"  # 构造响应
+                elif op == "P":  # 如果是PUT操作
+                    key = parts[1]  # 获取key
+                    val = " ".join(parts[2:]) if len(parts)>=3 else ""  # 获取value（可能有空格）
+                    ret = tuple_space.put(key, val)  # 调用元组空间的put方法
+                    resp = f"OK ({key}, {val}) added" if ret == 0 else f"ERR {key} already exists"
  
